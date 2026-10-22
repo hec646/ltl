@@ -41,7 +41,6 @@
         a { color: inherit; text-decoration: none; transition: all 0.3s ease; }
         img { max-width: 100%; display: block; }
 
-        /* Header */
         header {
             position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
             background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px);
@@ -70,7 +69,6 @@
             padding: 8px 22px !important; border-radius: 2px; font-size: 0.82rem !important;
         }
 
-        /* Hero */
         .page-hero {
             margin-top: 72px; background: linear-gradient(135deg, #FFFFFF 0%, #F5F0E6 100%);
             border-bottom: 1px solid var(--border-line); padding: 75px 30px;
@@ -95,24 +93,49 @@
         }
         .hero-visual img.main-hero-img { width: 100%; height: 350px; object-fit: contain; background: #FAFAFA; }
 
-        /* Product Logo Stamp */
         .oem-logo-stamp {
-            position: absolute; top: 18px; right: 18px; width: 50px; height: 38px;
+            position: absolute; top: 18px; right: 18px; width: 48px; height: 36px;
             background: rgba(255, 255, 255, 0.94); border: 1px solid var(--gold-light);
             border-radius: 4px; padding: 4px; z-index: 10;
         }
         .oem-logo-stamp img { width: 100%; height: 100%; object-fit: contain; }
 
-        /* Triptych Section (Estee Lauder Style) */
-        .luxury-showcase {
-            background: var(--bg-dark); color: #F5F2EB; padding: 85px 30px; margin: 60px 0;
+        .page-title-block { text-align: center; margin-bottom: 45px; }
+        .page-title-block .en {
+            font-family: var(--font-en); font-size: 2.5rem; font-weight: 400;
+            letter-spacing: 0.14em; color: var(--gold-primary); display: block; line-height: 1.1;
         }
+        .page-title-block .jp {
+            font-family: var(--font-serif); font-size: 0.95rem; letter-spacing: 0.2em;
+            color: var(--text-muted); margin-top: 8px; display: block;
+        }
+
+        .cat-nav-section { max-width: 1200px; margin: 65px auto 40px; padding: 0 30px; }
+        .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .cat-card {
+            background: var(--bg-white); border: 1px solid var(--border-line);
+            padding: 18px; display: flex; align-items: center; gap: 16px;
+        }
+        .cat-card:hover {
+            border-color: var(--gold-primary); transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(184, 155, 103, 0.12);
+        }
+        .cat-thumb {
+            width: 64px; height: 64px; object-fit: cover; border-radius: 50%;
+            border: 1px solid var(--border-line); flex-shrink: 0; background: var(--bg-beige);
+        }
+        .cat-info .en { font-family: var(--font-en); font-size: 1.05rem; color: var(--logo-brown); display: block; font-weight: 600; }
+        .cat-info .jp { font-family: var(--font-serif); font-size: 0.85rem; color: var(--text-dark); display: block; margin-top: 2px; }
+        .cat-check { font-family: var(--font-en); font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.1em; display: inline-block; margin-top: 5px; border-bottom: 1px solid var(--gold-light); }
+
+        .luxury-showcase { background: var(--bg-dark); color: #F5F2EB; padding: 85px 30px; margin: 60px 0; }
         .luxury-inner { max-width: 1200px; margin: 0 auto; }
         .luxury-header { text-align: center; margin-bottom: 50px; }
         .luxury-header .sub { font-family: var(--font-en); color: var(--gold-primary); letter-spacing: 0.25em; font-size: 0.95rem; }
         .luxury-header h2 { font-family: var(--font-serif); font-size: 1.95rem; color: #FFFFFF; margin-top: 8px; font-weight: 400; }
         .triptych-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
         .triptych-card { background: #12100E; border: 1px solid rgba(184, 155, 103, 0.35); overflow: hidden; position: relative; }
+        .triptych-card:hover { transform: translateY(-6px); border-color: var(--gold-primary); }
         .triptych-img-wrap { width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #0d0b0a; position: relative; }
         .triptych-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
         .triptych-body { padding: 24px; }
@@ -120,7 +143,6 @@
         .triptych-title { font-family: var(--font-serif); font-size: 1.1rem; color: #FFFFFF; margin-bottom: 10px; font-weight: 400; }
         .triptych-text { font-size: 0.84rem; color: #BDB6AE; line-height: 1.8; }
 
-        /* Product Catalog (T's Kiss Style) */
         .product-section { max-width: 1140px; margin: 0 auto 80px; padding: 0 30px; }
         .category-banner {
             text-align: center; padding: 30px 0 20px; border-top: 1px solid var(--border-line);
@@ -138,6 +160,7 @@
         .product-name { font-family: var(--font-serif); font-size: 1.45rem; font-weight: 500; color: var(--text-dark); margin: 6px 0 12px; }
         .product-spec { font-size: 0.86rem; color: var(--text-muted); margin-left: 12px; font-weight: 300; }
         .recommend-box { background: var(--bg-beige); padding: 10px 14px; margin-bottom: 16px; font-size: 0.85rem; }
+        .recommend-label { font-family: var(--font-serif); font-size: 0.78rem; background: var(--logo-brown); color: #fff; padding: 3px 10px; margin-right: 8px; }
         .product-summary { font-size: 0.92rem; color: var(--text-body); line-height: 1.9; margin-bottom: 20px; }
         .read-more-btn {
             display: inline-flex; align-items: center; gap: 8px; background: transparent;
@@ -149,7 +172,20 @@
         .product-detail-drawer.open { display: block; }
         .detail-heading { font-family: var(--font-serif); color: var(--logo-brown); font-weight: 500; margin: 14px 0 6px; font-size: 0.9rem; }
 
-        /* Business Section (Word Manuscript 01-06) */
+        .philosophy-section { max-width: 1140px; margin: 80px auto; padding: 0 30px; }
+        .philosophy-box {
+            background: var(--bg-white); border: 1px solid var(--border-line);
+            padding: 50px 45px; text-align: center; margin-bottom: 35px;
+        }
+        .philosophy-box h3 { font-family: var(--font-serif); font-size: 1.6rem; color: var(--text-dark); margin-bottom: 8px; }
+        .philosophy-box .en-sub { font-family: var(--font-en); color: var(--gold-primary); font-size: 1.05rem; letter-spacing: 0.15em; display: block; margin-bottom: 24px; }
+        .philosophy-box p { max-width: 840px; margin: 0 auto 16px; font-size: 0.94rem; color: var(--text-body); line-height: 2; }
+        .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .value-card { background: var(--bg-white); border: 1px solid var(--border-line); border-top: 3px solid var(--logo-brown); padding: 26px 20px; }
+        .value-card h4 { font-family: var(--font-serif); font-size: 1.05rem; color: var(--text-dark); margin-bottom: 10px; font-weight: 500; }
+        .value-card h4 span { font-family: var(--font-en); font-size: 0.8rem; color: var(--gold-dark); display: block; letter-spacing: 0.12em; margin-top: 2px; }
+        .value-card p { font-size: 0.85rem; color: var(--text-body); line-height: 1.75; }
+
         .business-section { background: var(--bg-beige); padding: 85px 30px; border-top: 1px solid var(--border-line); border-bottom: 1px solid var(--border-line); }
         .business-container { max-width: 1140px; margin: 0 auto; }
         .lead-statement {
@@ -159,11 +195,14 @@
         }
         .biz-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
         .biz-card { background: var(--bg-white); border: 1px solid var(--border-line); padding: 32px; }
-        .biz-num { font-family: var(--font-en); font-size: 1.6rem; color: var(--logo-brown); font-weight: 600; margin-bottom: 8px; display: block; }
+        .biz-header { display: flex; align-items: baseline; gap: 12px; border-bottom: 1px solid var(--border-line); padding-bottom: 10px; margin-bottom: 14px; }
+        .biz-num { font-family: var(--font-en); font-size: 1.6rem; color: var(--logo-brown); font-weight: 600; }
         .biz-card h3 { font-family: var(--font-serif); font-size: 1.12rem; margin-bottom: 10px; color: var(--text-dark); }
-        .biz-card p { font-size: 0.88rem; color: var(--text-body); line-height: 1.85; }
+        .biz-en { font-family: var(--font-en); font-size: 0.85rem; color: var(--gold-dark); letter-spacing: 0.12em; display: block; margin-bottom: 10px; }
+        .biz-card p { font-size: 0.88rem; color: var(--text-body); line-height: 1.85; margin-bottom: 10px; }
+        .biz-sublist { background: var(--bg-main); padding: 12px 16px; border-left: 2px solid var(--gold-primary); font-size: 0.84rem; color: var(--text-dark); margin-top: 10px; }
+        .biz-sublist div { margin-bottom: 5px; }
 
-        /* Company & Contact */
         .company-section { max-width: 1000px; margin: 80px auto; padding: 0 30px; }
         .profile-table { width: 100%; border-collapse: collapse; background: var(--bg-white); border: 1px solid var(--border-line); }
         .profile-table th { width: 220px; text-align: left; padding: 18px 22px; background: var(--bg-beige); font-family: var(--font-serif); font-size: 0.9rem; color: var(--text-dark); }
@@ -176,52 +215,98 @@
         footer { background: var(--bg-dark); color: #9E968F; padding: 50px 30px; text-align: center; font-size: 0.85rem; }
 
         @media (max-width: 860px) {
-            .hero-container, .product-item, .triptych-grid, .biz-grid { grid-template-columns: 1fr; }
+            .hero-container, .product-item, .triptych-grid, .biz-grid, .values-grid { grid-template-columns: 1fr; }
+            .cat-grid { grid-template-columns: repeat(2, 1fr); }
             .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header Navigation -->
     <header>
         <div class="header-inner">
             <a href="#" class="brand-logo-area">
-                <img src="assets/logo.jpg" class="brand-logo-img" alt="LTL Logo">
+                <img data-src-name="logo" class="brand-logo-img auto-img" alt="LTL Logo">
                 <div class="brand-logo-text">
                     <span class="jp-name">株式会社エル・ティ・エル</span>
                     <span class="en-name">LTL CO., LTD.</span>
                 </div>
             </a>
             <ul class="nav-links">
-                <li><a href="#company">会社概要</a></li>
-                <li><a href="#business">事業紹介</a></li>
+                <li><a href="#company">01 会社概要</a></li>
+                <li><a href="#philosophy">02 企業理念</a></li>
+                <li><a href="#business">03 事業紹介</a></li>
                 <li><a href="#products">商品一覧・OEM</a></li>
                 <li><a href="#rei-special">REI SERUM 特集</a></li>
-                <li><a href="#contact" class="nav-contact-btn">お問い合わせ</a></li>
+                <li><a href="#contact" class="nav-contact-btn">04 お問い合わせ</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero Banner -->
     <section class="page-hero">
         <div class="hero-container">
             <div>
                 <span class="hero-badge">Connecting Japan and the World</span>
                 <h1 class="hero-title">日本と世界をつなぎ、<br>新たなビジネスの可能性を創造する。</h1>
                 <p class="hero-desc">
-                    株式会社エル・ティ・エルは、商品企画・開発、国際貿易、輸出入支援、OEM・ODM事業、ビジネスマッチングまで、多岐にわたる事業を展開する総合ビジネスパートナーです[cite: 9]。
+                    株式会社エル・ティ・エルは、商品企画・開発、国際貿易、輸出入支援、ビジネスマッチングなど、多岐にわたる事業を展開する総合ビジネスパートナーです[cite: 13]。<br>
+                    美容・健康食品・化粧品OEM/ODMをはじめ、生活用品、食品、陶器、エネルギー関連商材まで、日本の優れた商品や技術を世界へ届けます[cite: 13]。
                 </p>
                 <a href="#products" class="read-more-btn">OEM & PRODUCT LINEUP ➔</a>
             </div>
             <div class="hero-visual">
-                <div class="oem-logo-stamp"><img src="assets/logo.jpg" alt="LTL Logo"></div>
-                <img class="main-hero-img" src="assets/rei_apple.jpg" alt="REI SERUM">
+                <div class="oem-logo-stamp"><img data-src-name="logo" class="auto-img" alt="LTL Logo"></div>
+                <img class="main-hero-img auto-img" data-src-name="rei_apple" alt="REI SERUM">
             </div>
         </div>
     </section>
 
-    <!-- REI SERUM 三聯畫展示 -->
+    <!-- T's Kiss Style Category Navigation -->
+    <section class="cat-nav-section" id="products">
+        <div class="page-title-block">
+            <span class="en">PRODUCT & OEM SHOWCASE</span>
+            <span class="jp">化粧品・OEM／ODM開発実績一覧</span>
+        </div>
+
+        <div class="cat-grid">
+            <a href="#cat-serum" class="cat-card">
+                <img class="cat-thumb auto-img" data-src-name="rei_apple" alt="Serum">
+                <div class="cat-info">
+                    <span class="en">Serum</span>
+                    <span class="jp">美容液・カプセル</span>
+                    <span class="cat-check">check ➔</span>
+                </div>
+            </a>
+            <a href="#cat-mask" class="cat-card">
+                <img class="cat-thumb auto-img" data-src-name="mask" alt="Sheet Mask">
+                <div class="cat-info">
+                    <span class="en">Sheet Mask</span>
+                    <span class="jp">シートマスク</span>
+                    <span class="cat-check">check ➔</span>
+                </div>
+            </a>
+            <a href="#cat-cream" class="cat-card">
+                <img class="cat-thumb auto-img" data-src-name="cream" alt="Moisturizer">
+                <div class="cat-info">
+                    <span class="en">Moisturizer</span>
+                    <span class="jp">クリーム・乳液</span>
+                    <span class="cat-check">check ➔</span>
+                </div>
+            </a>
+            <a href="#cat-wash" class="cat-card">
+                <img class="cat-thumb auto-img" data-src-name="photo-1556228720-195a672e8a03" alt="Cleansing">
+                <div class="cat-info">
+                    <span class="en">Cleansing & Wash</span>
+                    <span class="jp">クレンジング・洗顔</span>
+                    <span class="cat-check">check ➔</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- REI SERUM 特集 (Estee Lauder Style 3-Panel) -->
     <section class="luxury-showcase" id="rei-special">
         <div class="luxury-inner">
             <div class="luxury-header">
@@ -231,8 +316,8 @@
             <div class="triptych-grid">
                 <div class="triptych-card">
                     <div class="triptych-img-wrap">
-                        <div class="oem-logo-stamp"><img src="assets/logo.jpg" alt="LTL Logo"></div>
-                        <img src="assets/rei_01.jpg" alt="01 THE ESSENCE">
+                        <div class="oem-logo-stamp"><img data-src-name="logo" class="auto-img" alt="LTL Logo"></div>
+                        <img data-src-name="rei_01" class="auto-img" alt="01 THE ESSENCE">
                     </div>
                     <div class="triptych-body">
                         <span class="triptych-step">01 | THE ESSENCE</span>
@@ -243,8 +328,8 @@
 
                 <div class="triptych-card">
                     <div class="triptych-img-wrap">
-                        <div class="oem-logo-stamp"><img src="assets/logo.jpg" alt="LTL Logo"></div>
-                        <img src="assets/rei_02.jpg" alt="02 THE INGREDIENTS">
+                        <div class="oem-logo-stamp"><img data-src-name="logo" class="auto-img" alt="LTL Logo"></div>
+                        <img data-src-name="rei_02" class="auto-img" alt="02 THE INGREDIENTS">
                     </div>
                     <div class="triptych-body">
                         <span class="triptych-step">02 | THE INGREDIENTS</span>
@@ -253,195 +338,4 @@
                     </div>
                 </div>
 
-                <div class="triptych-card">
-                    <div class="triptych-img-wrap">
-                        <div class="oem-logo-stamp"><img src="assets/logo.jpg" alt="LTL Logo"></div>
-                        <img src="assets/rei_03.jpg" alt="03 THE TRANSFORMATION">
-                    </div>
-                    <div class="triptych-body">
-                        <span class="triptych-step">03 | THE TRANSFORMATION</span>
-                        <h3 class="triptych-title">すっとなじみ、満ちる潤い</h3>
-                        <p class="triptych-text">お肌にすっとなじみ、潤いが角質層の隅々まで浸透し、なめらかでキメの整ったみずみずしい潤いハリ肌へと導きます。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 產品列表（T's Kiss 風格） -->
-    <section class="product-section" id="products">
-        <div class="category-banner">
-            <h2 class="jp">美容液・カプセル</h2>
-            <span class="en">Serum & Capsule</span>
-        </div>
-
-        <!-- REI SERUM -->
-        <div class="product-item">
-            <div class="product-img-box">
-                <div class="oem-logo-stamp"><img src="assets/logo.jpg" alt="LTL Logo"></div>
-                <img src="assets/rei_apple.jpg" alt="REI SERUM">
-            </div>
-            <div>
-                <h3 class="product-name">REI SERUM ＜美容液＞<span class="product-spec">40mg / 30粒</span></h3>
-                <div class="recommend-box">オススメ：エイジングケア・乾燥・ハリ不足・ツヤ肌</div>
-                <p class="product-summary">
-                    お肌本来が持つ力に着目し、金箔を配合することで新陳代謝を活発にし、お肌にしっとりとした潤いとハリを与えます。お肌にすっとなじみ、潤いが角質層の隅々まで浸透します。
-                </p>
-                <button class="read-more-btn" onclick="toggleDetail(this)">Read more ＋</button>
-                <div class="product-detail-drawer">
-                    <div class="detail-heading">▼ 主成分 (保湿成分)</div>
-                    <p>・シクロペンタシロキサン ・アスコルビン酸 ・ホホバ油 ・ユビキノン ・金 ・ローズマリーエキス ・ヒト遺伝子組換ポリペプチド群</p>
-                    <div class="detail-heading">▼ 使用方法</div>
-                    <p>洗顔・化粧水の後、カプセルを開けて適量を手に取り、お顔全体になじませてください。</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- HANA AURA BLOOM -->
-        <div class="product-item">
-            <div class="product-img-box">
-                <div class="oem-logo-stamp"><img src="assets/logo.jpg" alt="LTL Logo"></div>
-                <img src="assets/serum.jpg" alt="HANA AURA BLOOM">
-            </div>
-            <div>
-                <h3 class="product-name">HANA AURA BLOOM 美容液<span class="product-spec">30ml</span></h3>
-                <div class="recommend-box">オススメ：透明感・くすみケア・保湿・乾燥対策</div>
-                <p class="product-summary">
-                    日本の桜エキスと椿オイルを閉じ込めたリバイタライジングセラム。みずみずしいテクスチャーで角質層へ素早く浸透し、透明感あふれる肌へ導きます。
-                </p>
-                <button class="read-more-btn" onclick="toggleDetail(this)">Read more ＋</button>
-                <div class="product-detail-drawer">
-                    <div class="detail-heading">▼ 主成分</div>
-                    <p>・ソメイヨシノ葉エキス ・ツバキ種子油 ・ヒアルロン酸Na ・グリセリン</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="category-banner">
-            <h2 class="jp">シートマスク・モイスチャライザー</h2>
-            <span class="en">Mask & Moisturizer</span>
-        </div>
-
-        <!-- SAKURA AMEE MASK -->
-        <div class="product-item">
-            <div class="product-img-box">
-                <div class="oem-logo-stamp"><img src="assets/logo.jpg" alt="LTL Logo"></div>
-                <img src="assets/mask.jpg" alt="SAKURA AMÉE Mask">
-            </div>
-            <div>
-                <h3 class="product-name">SAKURA AMÉE 高保湿リペアマスク<span class="product-spec">25ml × 5枚入</span></h3>
-                <div class="recommend-box">オススメ：集中保湿・肌荒れ防止・サロン施術後ケア</div>
-                <p class="product-summary">
-                    密着度の高い高級不織布に濃密美容液を凝縮。肌バリアを整え、うるおいと透明感を与える日本品質のプレミアムシートマスク。
-                </p>
-                <button class="read-more-btn" onclick="toggleDetail(this)">Read more ＋</button>
-                <div class="product-detail-drawer">
-                    <div class="detail-heading">▼ 主成分</div>
-                    <p>・サクラ葉エキス ・セラミドNP/AP ・加水分解コラーゲン ・ヒアルロン酸Na</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- MIKAGU CREAM -->
-        <div class="product-item">
-            <div class="product-img-box">
-                <div class="oem-logo-stamp"><img src="assets/logo.jpg" alt="LTL Logo"></div>
-                <img src="assets/cream.jpg" alt="MIKAGU Cream">
-            </div>
-            <div>
-                <h3 class="product-name">美輝 MIKAGU リペアクリーム<span class="product-spec">50ml</span></h3>
-                <div class="recommend-box">オススメ：乾燥小ジワ・ハリ弾力・ナイトケア</div>
-                <p class="product-summary">
-                    日本古来のコメ発酵液と桜花エキスを融合したラグジュアリークリーム。翌朝まで濃密なハリとツヤをキープします。
-                </p>
-                <button class="read-more-btn" onclick="toggleDetail(this)">Read more ＋</button>
-                <div class="product-detail-drawer">
-                    <div class="detail-heading">▼ 主成分</div>
-                    <p>・コメ発酵液 ・ソメイヨシノ葉エキス ・スクワラン ・シア脂 ・ナイアシンアミド</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 事業紹介 (01-06) -->
-    <section class="business-section" id="business">
-        <div class="business-container">
-            <h2 style="font-family:var(--font-serif); font-size:1.8rem; text-align:center; font-weight:400; margin-bottom:20px;">事業紹介</h2>
-            <div class="lead-statement">
-                日本と世界をつなぎ、ビジネスの可能性を広げる。<br>
-                株式会社エル・ティ・エルは、商品企画から製造・調達、輸出入、海外市場展開まで各分野の専門知識を活かし総合サポートします[cite: 9]。
-            </div>
-            <div class="biz-grid">
-                <div class="biz-card">
-                    <span class="biz-num">01</span>
-                    <h3>美容・健康食品・OEM/ODM事業</h3>
-                    <p>化粧品・健康食品の企画・販売、輸出入支援、およびOEM・ODMによる独自性・市場競争力を備えた高付加価値商品の開発をサポート[cite: 9]。</p>
-                </div>
-                <div class="biz-card">
-                    <span class="biz-num">02</span>
-                    <h3>輸出入・貿易支援事業</h3>
-                    <p>商品調達、通関・物流に関する手配や貿易実務のさまざまな場面に対応し、安定した海外ビジネスの発展を支援[cite: 9]。</p>
-                </div>
-                <div class="biz-card">
-                    <span class="biz-num">03</span>
-                    <h3>生活用品・食品事業</h3>
-                    <p>日本国内で培われた品質と技術を活かした生活用品や食品を中心に、海外市場への輸出展開を支援[cite: 9]。</p>
-                </div>
-                <div class="biz-card">
-                    <span class="biz-num">04</span>
-                    <h3>陶器事業</h3>
-                    <p>日本各地で受け継がれてきた伝統と職人の技術が息づく陶器・焼物を海外市場へ展開し、日本の伝統美を世界へ届ける[cite: 9]。</p>
-                </div>
-                <div class="biz-card">
-                    <span class="biz-num">05</span>
-                    <h3>ビジネスマッチング・商談会事業</h3>
-                    <p>国内外の企業交流会、商談会、ビジネスマッチングイベントの企画・運営を通じて新たな事業機会を創出[cite: 9]。</p>
-                </div>
-                <div class="biz-card">
-                    <span class="biz-num">06</span>
-                    <h3>エネルギー関連事業</h3>
-                    <p>再生可能エネルギー分野を視野に入れ、国内外の市場動向を捉えた多様なニーズに対応する商材の調達・供給を目指す[cite: 9]。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 会社概要 -->
-    <section class="company-section" id="company">
-        <h2 style="font-family:var(--font-serif); font-size:1.8rem; text-align:center; margin-bottom:30px; font-weight:400;">会社概要</h2>
-        <table class="profile-table">
-            <tr><th>会社名</th><td>株式会社エル・ティ・エル（LTL CO. LTD.）[cite: 9]</td></tr>
-            <tr><th>代表者</th><td>代表取締役 吉田 姿伶[cite: 9]</td></tr>
-            <tr><th>所在地</th><td>〒145-0065 東京都大田区東雪谷1丁目2番3-102号[cite: 9]</td></tr>
-            <tr><th>設立</th><td>平成27年4月17日[cite: 9]</td></tr>
-            <tr><th>事業内容</th><td>商品企画・開発、化粧品・健康食品事業、OEM・ODM事業、輸出入・貿易支援、生活用品・食品輸出、陶器輸出、ビジネスマッチング、エネルギー関連事業[cite: 9]</td></tr>
-            <tr><th>連絡先</th><td>TEL：03-6421-9675 ／ FAX：03-6421-9676[cite: 9]</td></tr>
-            <tr><th>E-mail</th><td>info@l-t-l.co.jp[cite: 9]</td></tr>
-        </table>
-
-        <div class="contact-cta" id="contact">
-            <h3 style="font-family:var(--font-serif); font-size:1.4rem; margin-bottom:12px;">お問い合わせ・ご相談</h3>
-            <p style="font-size:0.9rem; color:var(--text-body);">OEM/ODM開発、日本市場進出、輸出入に関するご相談はお気軽にご連絡ください[cite: 9]。</p>
-            <div class="contact-methods">
-                <div class="contact-pill"><i class="fa-solid fa-phone"></i> TEL：03-6421-9675[cite: 9]</div>
-                <div class="contact-pill"><i class="fa-solid fa-fax"></i> FAX：03-6421-9676[cite: 9]</div>
-                <div class="contact-pill"><i class="fa-solid fa-envelope"></i> E-mail：info@l-t-l.co.jp[cite: 9]</div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p style="font-family:var(--font-serif); color:#FFF; font-size:1rem; margin-bottom:6px;">株式会社エル・ティ・エル（LTL CO. LTD.）</p>
-        <p>〒145-0065 東京都大田区東雪谷1丁目2番3-102号 | TEL：03-6421-9675[cite: 9]</p>
-        <p style="margin-top:15px; font-size:0.75rem; opacity:0.6;">© LTL CO. LTD. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        function toggleDetail(btn) {
-            const drawer = btn.nextElementSibling;
-            const isOpen = drawer.classList.toggle('open');
-            btn.textContent = isOpen ? 'Close －' : 'Read more ＋';
-        }
-    </script>
-</body>
-</html>
+                <div class="
