@@ -3,33 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>株式会社エル・ティ・エル | LTL CO. LTD. - 総合ビジネスパートナー・化粧品OEM/ODM</title>
+    <title>株式会社エル・ティ・エル | LTL CO., LTD. - 総合ビジネスパートナー・化粧品OEM/ODM</title>
+    <meta name="description" content="株式会社エル・ティ・エル（LTL CO., LTD.）は日本と世界をつなぐ総合ビジネスパートナーです。商品企画・開発、化粧品・健康食品OEM/ODM、国際貿易・輸出入支援を展開。">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         :root {
             --bg-main: #FAF8F5;
             --bg-white: #FFFFFF;
             --bg-beige: #F3EFEA;
-            --bg-dark: #1A1817;
+            --bg-dark: #141210;
+            --bg-dark-card: #1D1A17;
             --gold-primary: #B89B67;
-            --gold-light: #D6C3A5;
-            --gold-dark: #7A542E;
+            --gold-light: #E4D5BE;
+            --gold-soft: #F5EFE6;
+            --gold-dark: #8A6E3E;
             --logo-brown: #7B4718;
             --text-dark: #2C2623;
-            --text-body: #5A534E;
-            --text-muted: #8C847E;
-            --border-line: #E6E0D6;
-            --font-en: 'Cormorant Garamond', serif;
-            --font-serif: 'Noto Serif JP', serif;
-            --font-sans: 'Noto Sans JP', sans-serif;
+            --text-body: #554D47;
+            --text-muted: #8A827C;
+            --border-line: #E8E2D8;
+            --border-dark: rgba(184, 155, 103, 0.3);
+            --font-en: 'Cormorant Garamond', 'Times New Roman', serif;
+            --font-serif: 'Noto Serif JP', 'Yu Mincho', serif;
+            --font-sans: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+            --shadow-soft: 0 10px 30px rgba(44, 38, 35, 0.06);
+            --shadow-hover: 0 16px 36px rgba(184, 155, 103, 0.16);
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-main);
             color: var(--text-dark);
@@ -37,187 +52,866 @@
             line-height: 1.85;
             font-weight: 300;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
-        a { color: inherit; text-decoration: none; transition: all 0.3s ease; }
-        img { max-width: 100%; display: block; }
 
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ─── Header Navigation ─── */
         header {
-            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
-            background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-line);
+            transition: all 0.3s ease;
+        }
+
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 14px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo-area {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand-logo-img {
+            width: 50px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .brand-logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-logo-text .jp-name {
+            font-family: var(--font-serif);
+            font-size: 1.12rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .brand-logo-text .en-name {
+            font-family: var(--font-en);
+            font-size: 0.78rem;
+            letter-spacing: 0.22em;
+            color: var(--logo-brown);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--font-serif);
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            color: var(--text-dark);
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--logo-brown);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-contact-btn {
+            background: var(--logo-brown);
+            color: #FFFFFF !important;
+            padding: 8px 22px !important;
+            border-radius: 2px;
+            font-size: 0.82rem !important;
+            letter-spacing: 0.1em;
+            font-weight: 400;
+        }
+
+        .nav-contact-btn:hover {
+            background: var(--gold-dark);
+            box-shadow: 0 4px 12px rgba(123, 71, 24, 0.25);
+        }
+
+        .nav-contact-btn::after {
+            display: none !important;
+        }
+
+        /* ─── Hero Banner ─── */
+        .page-hero {
+            margin-top: 68px;
+            background: linear-gradient(135deg, #FFFFFF 0%, #FAF6EE 50%, #F2EBE0 100%);
+            border-bottom: 1px solid var(--border-line);
+            padding: 80px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-family: var(--font-en);
+            font-size: 0.95rem;
+            letter-spacing: 0.22em;
+            color: var(--logo-brown);
+            border-bottom: 1px solid var(--gold-primary);
+            padding-bottom: 4px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: 2.3rem;
+            line-height: 1.55;
+            font-weight: 400;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-desc {
+            font-size: 0.96rem;
+            color: var(--text-body);
+            line-height: 2;
+            margin-bottom: 32px;
+            text-align: justify;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold-solid {
+            background: var(--logo-brown);
+            color: #FFFFFF;
+            padding: 12px 30px;
+            font-family: var(--font-en);
+            font-size: 0.92rem;
+            letter-spacing: 0.15em;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+
+        .btn-gold-solid:hover {
+            background: var(--gold-dark);
+            color: #FFFFFF;
+        }
+
+        .btn-gold-outline {
+            background: transparent;
+            color: var(--logo-brown);
+            border: 1px solid var(--logo-brown);
+            padding: 12px 28px;
+            font-family: var(--font-serif);
+            font-size: 0.88rem;
+            letter-spacing: 0.1em;
+            border-radius: 2px;
+        }
+
+        .btn-gold-outline:hover {
+            background: rgba(123, 71, 24, 0.06);
+        }
+
+        .hero-visual {
+            background: #FFFFFF;
+            padding: 24px;
+            border: 1px solid var(--border-line);
+            box-shadow: var(--shadow-soft);
+            border-radius: 4px;
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-visual img.main-hero-img {
+            width: 100%;
+            height: 380px;
+            object-fit: contain;
+            background: #FAFAFA;
+        }
+
+        /* OEM Logo Stamp */
+        .oem-logo-stamp {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 52px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.94);
+            border: 1px solid var(--gold-light);
+            border-radius: 4px;
+            padding: 4px;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .oem-logo-stamp img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* ─── Section Header ─── */
+        .page-title-block {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 0 20px;
+        }
+
+        .page-title-block .en {
+            font-family: var(--font-en);
+            font-size: 2.6rem;
+            font-weight: 400;
+            letter-spacing: 0.16em;
+            color: var(--gold-primary);
+            display: block;
+            line-height: 1.1;
+        }
+
+        .page-title-block .jp {
+            font-family: var(--font-serif);
+            font-size: 0.95rem;
+            letter-spacing: 0.22em;
+            color: var(--text-muted);
+            margin-top: 8px;
+            display: block;
+        }
+
+        /* ─── Category Quick Navigation (T's Kiss Style) ─── */
+        .cat-nav-section {
+            max-width: 1200px;
+            margin: 70px auto 40px;
+            padding: 0 30px;
+        }
+
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .cat-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-line);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            border-radius: 3px;
+        }
+
+        .cat-card:hover {
+            border-color: var(--gold-primary);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .cat-thumb {
+            width: 68px;
+            height: 68px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid var(--border-line);
+            flex-shrink: 0;
+            background: var(--bg-beige);
+        }
+
+        .cat-info .en {
+            font-family: var(--font-en);
+            font-size: 1.1rem;
+            color: var(--logo-brown);
+            display: block;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .cat-info .jp {
+            font-family: var(--font-serif);
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            display: block;
+            margin-top: 3px;
+        }
+
+        .cat-check {
+            font-family: var(--font-en);
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+            display: inline-block;
+            margin-top: 6px;
+            border-bottom: 1px solid var(--gold-light);
+        }
+
+        /* ─── Luxury 3-Panel Feature for REI SERUM ─── */
+        .luxury-showcase {
+            background: var(--bg-dark);
+            color: #F5F2EB;
+            padding: 95px 30px;
+            margin: 75px 0;
+            position: relative;
+        }
+
+        .luxury-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .luxury-header {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .luxury-header .sub {
+            font-family: var(--font-en);
+            color: var(--gold-primary);
+            letter-spacing: 0.28em;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .luxury-header h2 {
+            font-family: var(--font-serif);
+            font-size: 2.1rem;
+            color: #FFFFFF;
+            margin-top: 6px;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+        }
+
+        .triptych-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .triptych-card {
+            background: var(--bg-dark-card);
+            border: 1px solid var(--border-dark);
+            overflow: hidden;
+            position: relative;
+            border-radius: 3px;
+            transition: transform 0.4s ease, border-color 0.4s ease;
+        }
+
+        .triptych-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold-primary);
+        }
+
+        .triptych-img-wrap {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background: #0d0b0a;
+            position: relative;
+        }
+
+        .triptych-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .triptych-card:hover .triptych-img-wrap img {
+            transform: scale(1.04);
+        }
+
+        .triptych-body {
+            padding: 26px 24px;
+        }
+
+        .triptych-step {
+            font-family: var(--font-en);
+            color: var(--gold-primary);
+            font-size: 0.88rem;
+            letter-spacing: 0.22em;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .triptych-title {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+        }
+
+        .triptych-text {
+            font-size: 0.86rem;
+            color: #BDB6AE;
+            line-height: 1.85;
+        }
+
+        /* ─── Product Catalog (T's Kiss Style) ─── */
+        .product-section {
+            max-width: 1140px;
+            margin: 0 auto 90px;
+            padding: 0 30px;
+        }
+
+        .category-banner {
+            text-align: center;
+            padding: 32px 0 22px;
+            border-top: 1px solid var(--border-line);
+            border-bottom: 1px solid var(--border-line);
+            margin-bottom: 45px;
+            background: var(--bg-white);
+        }
+
+        .category-banner .jp {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            letter-spacing: 0.16em;
+            color: var(--text-dark);
+            font-weight: 400;
+        }
+
+        .category-banner .en {
+            font-family: var(--font-en);
+            font-size: 0.98rem;
+            letter-spacing: 0.26em;
+            color: var(--gold-primary);
+            display: block;
+            margin-top: 4px;
+        }
+
+        .product-item {
+            background: var(--bg-white);
+            border: 1px solid var(--border-line);
+            padding: 44px;
+            margin-bottom: 38px;
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 48px;
+            align-items: start;
+            border-radius: 3px;
+        }
+
+        .product-img-box {
+            background: var(--bg-main);
+            border: 1px solid var(--border-line);
+            padding: 16px;
+            position: relative;
+            text-align: center;
+        }
+
+        .product-img-box img {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            background: #FFF;
+        }
+
+        .product-name {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin: 6px 0 12px;
+            letter-spacing: 0.05em;
+        }
+
+        .product-spec {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-left: 12px;
+            font-weight: 300;
+        }
+
+        .recommend-box {
+            background: var(--bg-beige);
+            padding: 11px 16px;
+            margin-bottom: 18px;
+            font-size: 0.86rem;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .recommend-label {
+            font-family: var(--font-serif);
+            font-size: 0.78rem;
+            background: var(--logo-brown);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 2px;
+            letter-spacing: 0.08em;
+        }
+
+        .product-summary {
+            font-size: 0.93rem;
+            color: var(--text-body);
+            line-height: 1.95;
+            margin-bottom: 22px;
+        }
+
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: 1px solid var(--logo-brown);
+            color: var(--logo-brown);
+            padding: 9px 26px;
+            font-family: var(--font-en);
+            font-size: 0.92rem;
+            letter-spacing: 0.16em;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+
+        .read-more-btn:hover {
+            background: var(--logo-brown);
+            color: #FFFFFF;
+        }
+
+        .product-detail-drawer {
+            display: none;
+            margin-top: 22px;
+            padding-top: 22px;
+            border-top: 1px dashed var(--border-line);
+            font-size: 0.88rem;
+            color: var(--text-body);
+            line-height: 1.9;
+        }
+
+        .product-detail-drawer.open {
+            display: block;
+        }
+
+        .detail-heading {
+            font-family: var(--font-serif);
+            color: var(--logo-brown);
+            font-weight: 500;
+            margin: 14px 0 6px;
+            font-size: 0.92rem;
+        }
+
+        /* ─── 02 企業理念（CORPORATE PHILOSOPHY） ─── */
+        .philosophy-section {
+            max-width: 1140px;
+            margin: 85px auto;
+            padding: 0 30px;
+        }
+
+        .philosophy-box {
+            background: var(--bg-white);
+            border: 1px solid var(--border-line);
+            padding: 55px 50px;
+            text-align: center;
+            margin-bottom: 35px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .philosophy-box h3 {
+            font-family: var(--font-serif);
+            font-size: 1.7rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .philosophy-box .en-sub {
+            font-family: var(--font-en);
+            color: var(--gold-primary);
+            font-size: 1.08rem;
+            letter-spacing: 0.16em;
+            display: block;
+            margin-bottom: 26px;
+        }
+
+        .philosophy-box p {
+            max-width: 860px;
+            margin: 0 auto 16px;
+            font-size: 0.95rem;
+            color: var(--text-body);
+            line-height: 2.05;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .value-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-line);
+            border-top: 3px solid var(--logo-brown);
+            padding: 28px 22px;
+            border-radius: 2px;
+        }
+
+        .value-card h4 {
+            font-family: var(--font-serif);
+            font-size: 1.08rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .value-card h4 span {
+            font-family: var(--font-en);
+            font-size: 0.82rem;
+            color: var(--gold-dark);
+            display: block;
+            letter-spacing: 0.14em;
+            margin-top: 3px;
+        }
+
+        .value-card p {
+            font-size: 0.86rem;
+            color: var(--text-body);
+            line-height: 1.8;
+        }
+
+        /* ─── 03 事業紹介（OUR BUSINESS） ─── */
+        .business-section {
+            background: var(--bg-beige);
+            padding: 90px 30px;
+            border-top: 1px solid var(--border-line);
             border-bottom: 1px solid var(--border-line);
         }
-        .header-inner {
-            max-width: 1280px; margin: 0 auto; padding: 14px 30px;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .brand-logo-area { display: flex; align-items: center; gap: 14px; }
-        .brand-logo-img { width: 48px; height: 38px; object-fit: contain; }
-        .brand-logo-text { display: flex; flex-direction: column; }
-        .brand-logo-text .jp-name {
-            font-family: var(--font-serif); font-size: 1.12rem; font-weight: 500;
-            letter-spacing: 0.1em; color: var(--text-dark);
-        }
-        .brand-logo-text .en-name {
-            font-family: var(--font-en); font-size: 0.78rem; letter-spacing: 0.22em;
-            color: var(--gold-dark); font-weight: 600;
-        }
-        .nav-links { display: flex; align-items: center; gap: 26px; list-style: none; }
-        .nav-links a { font-family: var(--font-serif); font-size: 0.85rem; letter-spacing: 0.08em; }
-        .nav-links a:hover { color: var(--gold-primary); }
-        .nav-contact-btn {
-            background: var(--logo-brown); color: #fff !important;
-            padding: 8px 22px !important; border-radius: 2px; font-size: 0.82rem !important;
+
+        .business-container {
+            max-width: 1140px;
+            margin: 0 auto;
         }
 
-        .page-hero {
-            margin-top: 72px; background: linear-gradient(135deg, #FFFFFF 0%, #F5F0E6 100%);
-            border-bottom: 1px solid var(--border-line); padding: 75px 30px;
-        }
-        .hero-container {
-            max-width: 1200px; margin: 0 auto; display: grid;
-            grid-template-columns: 1.15fr 0.85fr; gap: 50px; align-items: center;
-        }
-        .hero-badge {
-            display: inline-block; font-family: var(--font-en); font-size: 0.92rem;
-            letter-spacing: 0.2em; color: var(--logo-brown); border-bottom: 1px solid var(--gold-primary);
-            padding-bottom: 4px; margin-bottom: 18px; text-transform: uppercase; font-weight: 600;
-        }
-        .hero-title {
-            font-family: var(--font-serif); font-size: 2.15rem; line-height: 1.55;
-            font-weight: 400; color: var(--text-dark); margin-bottom: 22px;
-        }
-        .hero-desc { font-size: 0.94rem; color: var(--text-body); line-height: 1.95; margin-bottom: 28px; }
-        .hero-visual {
-            background: #FFFFFF; padding: 22px; border: 1px solid var(--border-line);
-            box-shadow: 0 20px 50px rgba(44, 38, 35, 0.06); border-radius: 4px; position: relative;
-        }
-        .hero-visual img.main-hero-img { width: 100%; height: 350px; object-fit: contain; background: #FAFAFA; }
-
-        .oem-logo-stamp {
-            position: absolute; top: 18px; right: 18px; width: 48px; height: 36px;
-            background: rgba(255, 255, 255, 0.94); border: 1px solid var(--gold-light);
-            border-radius: 4px; padding: 4px; z-index: 10;
-        }
-        .oem-logo-stamp img { width: 100%; height: 100%; object-fit: contain; }
-
-        .page-title-block { text-align: center; margin-bottom: 45px; }
-        .page-title-block .en {
-            font-family: var(--font-en); font-size: 2.5rem; font-weight: 400;
-            letter-spacing: 0.14em; color: var(--gold-primary); display: block; line-height: 1.1;
-        }
-        .page-title-block .jp {
-            font-family: var(--font-serif); font-size: 0.95rem; letter-spacing: 0.2em;
-            color: var(--text-muted); margin-top: 8px; display: block;
-        }
-
-        .cat-nav-section { max-width: 1200px; margin: 65px auto 40px; padding: 0 30px; }
-        .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-        .cat-card {
-            background: var(--bg-white); border: 1px solid var(--border-line);
-            padding: 18px; display: flex; align-items: center; gap: 16px;
-        }
-        .cat-card:hover {
-            border-color: var(--gold-primary); transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(184, 155, 103, 0.12);
-        }
-        .cat-thumb {
-            width: 64px; height: 64px; object-fit: cover; border-radius: 50%;
-            border: 1px solid var(--border-line); flex-shrink: 0; background: var(--bg-beige);
-        }
-        .cat-info .en { font-family: var(--font-en); font-size: 1.05rem; color: var(--logo-brown); display: block; font-weight: 600; }
-        .cat-info .jp { font-family: var(--font-serif); font-size: 0.85rem; color: var(--text-dark); display: block; margin-top: 2px; }
-        .cat-check { font-family: var(--font-en); font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.1em; display: inline-block; margin-top: 5px; border-bottom: 1px solid var(--gold-light); }
-
-        .luxury-showcase { background: var(--bg-dark); color: #F5F2EB; padding: 85px 30px; margin: 60px 0; }
-        .luxury-inner { max-width: 1200px; margin: 0 auto; }
-        .luxury-header { text-align: center; margin-bottom: 50px; }
-        .luxury-header .sub { font-family: var(--font-en); color: var(--gold-primary); letter-spacing: 0.25em; font-size: 0.95rem; }
-        .luxury-header h2 { font-family: var(--font-serif); font-size: 1.95rem; color: #FFFFFF; margin-top: 8px; font-weight: 400; }
-        .triptych-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-        .triptych-card { background: #12100E; border: 1px solid rgba(184, 155, 103, 0.35); overflow: hidden; position: relative; }
-        .triptych-card:hover { transform: translateY(-6px); border-color: var(--gold-primary); }
-        .triptych-img-wrap { width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #0d0b0a; position: relative; }
-        .triptych-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
-        .triptych-body { padding: 24px; }
-        .triptych-step { font-family: var(--font-en); color: var(--gold-primary); font-size: 0.88rem; letter-spacing: 0.2em; display: block; margin-bottom: 6px; }
-        .triptych-title { font-family: var(--font-serif); font-size: 1.1rem; color: #FFFFFF; margin-bottom: 10px; font-weight: 400; }
-        .triptych-text { font-size: 0.84rem; color: #BDB6AE; line-height: 1.8; }
-
-        .product-section { max-width: 1140px; margin: 0 auto 80px; padding: 0 30px; }
-        .category-banner {
-            text-align: center; padding: 30px 0 20px; border-top: 1px solid var(--border-line);
-            border-bottom: 1px solid var(--border-line); margin-bottom: 40px; background: var(--bg-white);
-        }
-        .category-banner .jp { font-family: var(--font-serif); font-size: 1.45rem; letter-spacing: 0.15em; color: var(--text-dark); }
-        .category-banner .en { font-family: var(--font-en); font-size: 0.95rem; letter-spacing: 0.25em; color: var(--gold-primary); display: block; margin-top: 4px; }
-        .product-item {
-            background: var(--bg-white); border: 1px solid var(--border-line);
-            padding: 40px; margin-bottom: 35px; display: grid; grid-template-columns: 360px 1fr;
-            gap: 45px; align-items: start;
-        }
-        .product-img-box { background: var(--bg-main); border: 1px solid var(--border-line); padding: 15px; position: relative; }
-        .product-img-box img { width: 100%; height: 320px; object-fit: cover; }
-        .product-name { font-family: var(--font-serif); font-size: 1.45rem; font-weight: 500; color: var(--text-dark); margin: 6px 0 12px; }
-        .product-spec { font-size: 0.86rem; color: var(--text-muted); margin-left: 12px; font-weight: 300; }
-        .recommend-box { background: var(--bg-beige); padding: 10px 14px; margin-bottom: 16px; font-size: 0.85rem; }
-        .recommend-label { font-family: var(--font-serif); font-size: 0.78rem; background: var(--logo-brown); color: #fff; padding: 3px 10px; margin-right: 8px; }
-        .product-summary { font-size: 0.92rem; color: var(--text-body); line-height: 1.9; margin-bottom: 20px; }
-        .read-more-btn {
-            display: inline-flex; align-items: center; gap: 8px; background: transparent;
-            border: 1px solid var(--logo-brown); color: var(--logo-brown); padding: 8px 24px;
-            font-family: var(--font-en); font-size: 0.9rem; letter-spacing: 0.15em; cursor: pointer; transition: all 0.3s;
-        }
-        .read-more-btn:hover { background: var(--logo-brown); color: #fff; }
-        .product-detail-drawer { display: none; margin-top: 20px; padding-top: 20px; border-top: 1px dashed var(--border-line); font-size: 0.88rem; color: var(--text-body); }
-        .product-detail-drawer.open { display: block; }
-        .detail-heading { font-family: var(--font-serif); color: var(--logo-brown); font-weight: 500; margin: 14px 0 6px; font-size: 0.9rem; }
-
-        .philosophy-section { max-width: 1140px; margin: 80px auto; padding: 0 30px; }
-        .philosophy-box {
-            background: var(--bg-white); border: 1px solid var(--border-line);
-            padding: 50px 45px; text-align: center; margin-bottom: 35px;
-        }
-        .philosophy-box h3 { font-family: var(--font-serif); font-size: 1.6rem; color: var(--text-dark); margin-bottom: 8px; }
-        .philosophy-box .en-sub { font-family: var(--font-en); color: var(--gold-primary); font-size: 1.05rem; letter-spacing: 0.15em; display: block; margin-bottom: 24px; }
-        .philosophy-box p { max-width: 840px; margin: 0 auto 16px; font-size: 0.94rem; color: var(--text-body); line-height: 2; }
-        .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-        .value-card { background: var(--bg-white); border: 1px solid var(--border-line); border-top: 3px solid var(--logo-brown); padding: 26px 20px; }
-        .value-card h4 { font-family: var(--font-serif); font-size: 1.05rem; color: var(--text-dark); margin-bottom: 10px; font-weight: 500; }
-        .value-card h4 span { font-family: var(--font-en); font-size: 0.8rem; color: var(--gold-dark); display: block; letter-spacing: 0.12em; margin-top: 2px; }
-        .value-card p { font-size: 0.85rem; color: var(--text-body); line-height: 1.75; }
-
-        .business-section { background: var(--bg-beige); padding: 85px 30px; border-top: 1px solid var(--border-line); border-bottom: 1px solid var(--border-line); }
-        .business-container { max-width: 1140px; margin: 0 auto; }
         .lead-statement {
-            max-width: 880px; margin: 0 auto 45px; text-align: center; font-family: var(--font-serif);
-            font-size: 1.02rem; line-height: 2.05; color: var(--text-dark); background: var(--bg-white);
-            padding: 30px 35px; border: 1px solid var(--border-line);
+            max-width: 900px;
+            margin: 0 auto 48px;
+            text-align: center;
+            font-family: var(--font-serif);
+            font-size: 1.04rem;
+            line-height: 2.1;
+            color: var(--text-dark);
+            background: var(--bg-white);
+            padding: 32px 38px;
+            border: 1px solid var(--border-line);
+            box-shadow: var(--shadow-soft);
         }
-        .biz-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
-        .biz-card { background: var(--bg-white); border: 1px solid var(--border-line); padding: 32px; }
-        .biz-header { display: flex; align-items: baseline; gap: 12px; border-bottom: 1px solid var(--border-line); padding-bottom: 10px; margin-bottom: 14px; }
-        .biz-num { font-family: var(--font-en); font-size: 1.6rem; color: var(--logo-brown); font-weight: 600; }
-        .biz-card h3 { font-family: var(--font-serif); font-size: 1.12rem; margin-bottom: 10px; color: var(--text-dark); }
-        .biz-en { font-family: var(--font-en); font-size: 0.85rem; color: var(--gold-dark); letter-spacing: 0.12em; display: block; margin-bottom: 10px; }
-        .biz-card p { font-size: 0.88rem; color: var(--text-body); line-height: 1.85; margin-bottom: 10px; }
-        .biz-sublist { background: var(--bg-main); padding: 12px 16px; border-left: 2px solid var(--gold-primary); font-size: 0.84rem; color: var(--text-dark); margin-top: 10px; }
-        .biz-sublist div { margin-bottom: 5px; }
 
-        .company-section { max-width: 1000px; margin: 80px auto; padding: 0 30px; }
-        .profile-table { width: 100%; border-collapse: collapse; background: var(--bg-white); border: 1px solid var(--border-line); }
-        .profile-table th { width: 220px; text-align: left; padding: 18px 22px; background: var(--bg-beige); font-family: var(--font-serif); font-size: 0.9rem; color: var(--text-dark); }
-        .profile-table td { padding: 18px 22px; font-size: 0.9rem; color: var(--text-body); border-bottom: 1px solid var(--border-line); }
-        .contact-cta { background: var(--bg-white); border: 1px solid var(--gold-primary); padding: 45px 35px; text-align: center; margin-top: 50px; }
-        .contact-methods { display: flex; justify-content: center; gap: 35px; margin-top: 24px; flex-wrap: wrap; }
-        .contact-pill { font-family: var(--font-serif); font-size: 1.05rem; color: var(--text-dark); }
-        .contact-pill i { color: var(--logo-brown); margin-right: 8px; }
+        .biz-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
 
-        footer { background: var(--bg-dark); color: #9E968F; padding: 50px 30px; text-align: center; font-size: 0.85rem; }
+        .biz-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-line);
+            padding: 34px 32px;
+            border-radius: 3px;
+        }
+
+        .biz-header {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            border-bottom: 1px solid var(--border-line);
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+        }
+
+        .biz-num {
+            font-family: var(--font-en);
+            font-size: 1.7rem;
+            color: var(--logo-brown);
+            font-weight: 600;
+        }
+
+        .biz-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .biz-en {
+            font-family: var(--font-en);
+            font-size: 0.86rem;
+            color: var(--gold-dark);
+            letter-spacing: 0.12em;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .biz-card p {
+            font-size: 0.89rem;
+            color: var(--text-body);
+            line-height: 1.9;
+            margin-bottom: 10px;
+        }
+
+        .biz-sublist {
+            background: var(--bg-main);
+            padding: 14px 18px;
+            border-left: 2px solid var(--gold-primary);
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            margin-top: 12px;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .biz-sublist div {
+            margin-bottom: 6px;
+            line-height: 1.75;
+        }
+
+        /* ─── 01 会社概要 & 04 お問い合わせ ─── */
+        .company-section {
+            max-width: 1000px;
+            margin: 85px auto;
+            padding: 0 30px;
+        }
+
+        .profile-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-white);
+            border: 1px solid var(--border-line);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .profile-table th {
+            width: 220px;
+            text-align: left;
+            padding: 20px 24px;
+            background: var(--bg-beige);
+            font-family: var(--font-serif);
+            font-size: 0.92rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            border-bottom: 1px solid var(--border-line);
+        }
+
+        .profile-table td {
+            padding: 20px 24px;
+            font-size: 0.92rem;
+            color: var(--text-body);
+            border-bottom: 1px solid var(--border-line);
+            line-height: 1.8;
+        }
+
+        .contact-cta {
+            background: var(--bg-white);
+            border: 1px solid var(--gold-primary);
+            padding: 50px 40px;
+            text-align: center;
+            margin-top: 55px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 36px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .contact-pill {
+            font-family: var(--font-serif);
+            font-size: 1.08rem;
+            color: var(--text-dark);
+        }
+
+        .contact-pill i {
+            color: var(--logo-brown);
+            margin-right: 8px;
+        }
+
+        /* ─── Footer ─── */
+        footer {
+            background: var(--bg-dark);
+            color: #9E968F;
+            padding: 55px 30px;
+            text-align: center;
+            font-size: 0.86rem;
+            line-height: 1.9;
+        }
 
         @media (max-width: 860px) {
-            .hero-container, .product-item, .triptych-grid, .biz-grid, .values-grid { grid-template-columns: 1fr; }
-            .cat-grid { grid-template-columns: repeat(2, 1fr); }
-            .nav-links { display: none; }
+            .hero-container, .product-item, .triptych-grid, .biz-grid, .values-grid {
+                grid-template-columns: 1fr;
+            }
+            .cat-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .nav-links {
+                display: none;
+            }
+            .profile-table th {
+                width: 140px;
+            }
         }
     </style>
 </head>
@@ -228,7 +922,7 @@
         <div class="header-inner">
             <a href="#" class="brand-logo-area">
                 <img src="./assets/logo.jpg"
-                     onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 220\'><ellipse cx=\'150\' cy=\'110\' rx=\'135\' ry=\'95\' fill=\'%237B4718\'/><text x=\'150\' y=\'135\' font-family=\'serif\' font-size=\'90\' fill=\'%23ffffff\' text-anchor=\'middle\' font-style=\'italic\' font-weight=\'bold\'>LL</text></svg>';"
+                     onerror="this.onerror=null; this.src='logo.jpg';"
                      class="brand-logo-img" alt="LTL Logo">
                 <div class="brand-logo-text">
                     <span class="jp-name">株式会社エル・ティ・エル</span>
@@ -253,20 +947,20 @@
                 <span class="hero-badge">Connecting Japan and the World</span>
                 <h1 class="hero-title">日本と世界をつなぎ、<br>新たなビジネスの可能性を創造する。</h1>
                 <p class="hero-desc">
-                    株式会社エル・ティ・エルは、商品企画・開発、国際貿易、輸出入支援、ビジネスマッチングなど、多岐にわたる事業を展開する総合ビジネスパートナーです[cite: 10]。<br>
-                    美容・健康食品・化粧品OEM/ODMをはじめ、生活用品、食品、陶器、エネルギー関連商材まで、日本の優れた商品や技術を世界へ届けます[cite: 10]。
+                    株式会社エル・ティ・エルは、商品企画・開発、国際貿易、輸出入支援、ビジネスマッチングなど、多岐にわたる事業を展開する総合ビジネスパートナーです。美容・健康食品・化粧品OEM/ODMをはじめ、生活用品、食品、陶器、エネルギー関連商材まで、日本の優れた商品や技術を世界へ届けます。
                 </p>
-                <a href="#products" class="read-more-btn">OEM & PRODUCT LINEUP ➔</a>
+                <div class="hero-btns">
+                    <a href="#products" class="btn-gold-solid">PRODUCT & OEM ➔</a>
+                    <a href="#business" class="btn-gold-outline">事業紹介を見る</a>
+                </div>
             </div>
             <div class="hero-visual">
                 <div class="oem-logo-stamp">
-                    <img src="./assets/logo.jpg"
-                         onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 220\'><ellipse cx=\'150\' cy=\'110\' rx=\'135\' ry=\'95\' fill=\'%237B4718\'/><text x=\'150\' y=\'135\' font-family=\'serif\' font-size=\'90\' fill=\'%23ffffff\' text-anchor=\'middle\' font-style=\'italic\' font-weight=\'bold\'>LL</text></svg>';"
-                         alt="LTL Logo">
+                    <img src="./assets/logo.jpg" onerror="this.onerror=null; this.src='logo.jpg';" alt="LTL Logo">
                 </div>
                 <img class="main-hero-img"
                      src="./assets/rei_apple.jpg"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80';"
+                     onerror="this.onerror=null; this.src='rei_apple.jpg';"
                      alt="REI SERUM">
             </div>
         </div>
@@ -282,7 +976,7 @@
         <div class="cat-grid">
             <a href="#cat-serum" class="cat-card">
                 <img class="cat-thumb" src="./assets/rei_apple.jpg"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=300&q=80';"
+                     onerror="this.onerror=null; this.src='rei_apple.jpg';"
                      alt="Serum">
                 <div class="cat-info">
                     <span class="en">Serum</span>
@@ -292,7 +986,7 @@
             </a>
             <a href="#cat-mask" class="cat-card">
                 <img class="cat-thumb" src="./assets/mask.jpg"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=300&q=80';"
+                     onerror="this.onerror=null; this.src='mask.jpg';"
                      alt="Sheet Mask">
                 <div class="cat-info">
                     <span class="en">Sheet Mask</span>
@@ -302,7 +996,7 @@
             </a>
             <a href="#cat-cream" class="cat-card">
                 <img class="cat-thumb" src="./assets/cream.jpg"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=300&q=80';"
+                     onerror="this.onerror=null; this.src='cream.jpg';"
                      alt="Moisturizer">
                 <div class="cat-info">
                     <span class="en">Moisturizer</span>
@@ -311,8 +1005,7 @@
                 </div>
             </a>
             <a href="#cat-wash" class="cat-card">
-                <img class="cat-thumb" src="./assets/cleanser.jpg"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=300&q=80';"
+                <img class="cat-thumb" src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=300&q=80"
                      alt="Cleansing">
                 <div class="cat-info">
                     <span class="en">Cleansing & Wash</span>
@@ -334,12 +1027,10 @@
                 <div class="triptych-card">
                     <div class="triptych-img-wrap">
                         <div class="oem-logo-stamp">
-                            <img src="./assets/logo.jpg"
-                                 onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 220\'><ellipse cx=\'150\' cy=\'110\' rx=\'135\' ry=\'95\' fill=\'%237B4718\'/><text x=\'150\' y=\'135\' font-family=\'serif\' font-size=\'90\' fill=\'%23ffffff\' text-anchor=\'middle\' font-style=\'italic\' font-weight=\'bold\'>LL</text></svg>';"
-                                 alt="LTL Logo">
+                            <img src="./assets/logo.jpg" onerror="this.onerror=null; this.src='logo.jpg';" alt="LTL Logo">
                         </div>
                         <img src="./assets/rei_01.jpg"
-                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80';"
+                             onerror="this.onerror=null; this.src='rei_01.jpg';"
                              alt="01 THE ESSENCE">
                     </div>
                     <div class="triptych-body">
@@ -352,12 +1043,10 @@
                 <div class="triptych-card">
                     <div class="triptych-img-wrap">
                         <div class="oem-logo-stamp">
-                            <img src="./assets/logo.jpg"
-                                 onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 220\'><ellipse cx=\'150\' cy=\'110\' rx=\'135\' ry=\'95\' fill=\'%237B4718\'/><text x=\'150\' y=\'135\' font-family=\'serif\' font-size=\'90\' fill=\'%23ffffff\' text-anchor=\'middle\' font-style=\'italic\' font-weight=\'bold\'>LL</text></svg>';"
-                                 alt="LTL Logo">
+                            <img src="./assets/logo.jpg" onerror="this.onerror=null; this.src='logo.jpg';" alt="LTL Logo">
                         </div>
                         <img src="./assets/rei_02.jpg"
-                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80';"
+                             onerror="this.onerror=null; this.src='rei_02.jpg';"
                              alt="02 THE INGREDIENTS">
                     </div>
                     <div class="triptych-body">
@@ -370,12 +1059,10 @@
                 <div class="triptych-card">
                     <div class="triptych-img-wrap">
                         <div class="oem-logo-stamp">
-                            <img src="./assets/logo.jpg"
-                                 onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 220\'><ellipse cx=\'150\' cy=\'110\' rx=\'135\' ry=\'95\' fill=\'%237B4718\'/><text x=\'150\' y=\'135\' font-family=\'serif\' font-size=\'90\' fill=\'%23ffffff\' text-anchor=\'middle\' font-style=\'italic\' font-weight=\'bold\'>LL</text></svg>';"
-                                 alt="LTL Logo">
+                            <img src="./assets/logo.jpg" onerror="this.onerror=null; this.src='logo.jpg';" alt="LTL Logo">
                         </div>
                         <img src="./assets/rei_03.jpg"
-                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80';"
+                             onerror="this.onerror=null; this.src='rei_03.jpg';"
                              alt="03 THE TRANSFORMATION">
                     </div>
                     <div class="triptych-body">
@@ -388,7 +1075,7 @@
         </div>
     </section>
 
-    <!-- 產品列表 -->
+    <!-- 產品列表（T's Kiss 日系沙龍風格） -->
     <section class="product-section">
         <div class="category-banner" id="cat-serum">
             <h2 class="jp">美容液・カプセル</h2>
@@ -399,12 +1086,10 @@
         <div class="product-item">
             <div class="product-img-box">
                 <div class="oem-logo-stamp">
-                    <img src="./assets/logo.jpg"
-                         onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 220\'><ellipse cx=\'150\' cy=\'110\' rx=\'135\' ry=\'95\' fill=\'%237B4718\'/><text x=\'150\' y=\'135\' font-family=\'serif\' font-size=\'90\' fill=\'%23ffffff\' text-anchor=\'middle\' font-style=\'italic\' font-weight=\'bold\'>LL</text></svg>';"
-                         alt="LTL Logo">
+                    <img src="./assets/logo.jpg" onerror="this.onerror=null; this.src='logo.jpg';" alt="LTL Logo">
                 </div>
                 <img src="./assets/rei_apple.jpg"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80';"
+                     onerror="this.onerror=null; this.src='rei_apple.jpg';"
                      alt="REI SERUM">
             </div>
             <div>
@@ -434,12 +1119,10 @@
         <div class="product-item">
             <div class="product-img-box">
                 <div class="oem-logo-stamp">
-                    <img src="./assets/logo.jpg"
-                         onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 220\'><ellipse cx=\'150\' cy=\'110\' rx=\'135\' ry=\'95\' fill=\'%237B4718\'/><text x=\'150\' y=\'135\' font-family=\'serif\' font-size=\'90\' fill=\'%23ffffff\' text-anchor=\'middle\' font-style=\'italic\' font-weight=\'bold\'>LL</text></svg>';"
-                         alt="LTL Logo">
+                    <img src="./assets/logo.jpg" onerror="this.onerror=null; this.src='logo.jpg';" alt="LTL Logo">
                 </div>
                 <img src="./assets/mask.jpg"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80';"
+                     onerror="this.onerror=null; this.src='mask.jpg';"
                      alt="SAKURA AMÉE Mask">
             </div>
             <div>
@@ -467,5 +1150,220 @@
         <div class="product-item">
             <div class="product-img-box">
                 <div class="oem-logo-stamp">
-                    <img src="./assets/logo.jpg"
-                         onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 300 220\'><ellipse cx=\'150\' cy=\'110\' rx=\'135\' ry=\'95\' fill=\'%237B4718\'/><text x=\'150\' y=\'13
+                    <img src="./assets/logo.jpg" onerror="this.onerror=null; this.src='logo.jpg';" alt="LTL Logo">
+                </div>
+                <img src="./assets/cream.jpg"
+                     onerror="this.onerror=null; this.src='cream.jpg';"
+                     alt="美輝 MIKAGU Cream">
+            </div>
+            <div>
+                <h3 class="product-name">美輝 MIKAGU リペアクリーム<span class="product-spec">50ml / 1.7 oz</span></h3>
+                <div class="recommend-box">
+                    <span class="recommend-label">こんな方にオススメ</span>乾燥小ジワ・ハリ弾力・ナイトケア・高保湿バリア
+                </div>
+                <p class="product-summary">
+                    日本古来のコメ発酵液と桜花エキスを融合したラグジュアリークリーム。シルクのようになめらかなテクスチャーで肌表面を包み込み、翌朝まで濃密なハリとツヤをキープします。
+                </p>
+                <button class="read-more-btn" onclick="toggleDetail(this)">Read more ＋</button>
+                <div class="product-detail-drawer">
+                    <div class="detail-heading">▼ 主成分</div>
+                    <p>・コメ発酵液 ・ソメイヨシノ葉エキス ・スクワラン ・シア脂 ・ナイアシンアミド</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Cleansing & Salon Line -->
+        <div class="category-banner" id="cat-wash">
+            <h2 class="jp">クレンジング・サロンケア専売</h2>
+            <span class="en">Cleansing & Salon Professional</span>
+        </div>
+
+        <div class="product-item">
+            <div class="product-img-box">
+                <div class="oem-logo-stamp">
+                    <img src="./assets/logo.jpg" onerror="this.onerror=null; this.src='logo.jpg';" alt="LTL Logo">
+                </div>
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+                     alt="Salon Professional Care">
+            </div>
+            <div>
+                <h3 class="product-name">サロン業務用パック・洗顔・ボディケアOEM<span class="product-spec">各種小ロット・処方受託</span></h3>
+                <div class="recommend-box">
+                    <span class="recommend-label">サロン様・企業様へ</span>オリジナルブランド開発・エステ専売品・日本市場参入
+                </div>
+                <p class="product-summary">
+                    擦らず落とす美容液クレンジング、きめ細かい洗顔フォーム、サロン施術用泥パックからボディローションまで、高付加価値なMade in Japan処方をワンストップでご提供いたします。
+                </p>
+                <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin-top:16px;">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80" style="height:100px; width:100%; object-fit:cover; border:1px solid var(--border-line);" alt="Body Lotion">
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400&q=80" style="height:100px; width:100%; object-fit:cover; border:1px solid var(--border-line);" alt="Cleanser">
+                    <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=400&q=80" style="height:100px; width:100%; object-fit:cover; border:1px solid var(--border-line);" alt="Skincare">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02｜企業理念（CORPORATE PHILOSOPHY） -->
+    <section class="philosophy-section" id="philosophy">
+        <div class="page-title-block">
+            <span class="en">02 | CORPORATE PHILOSOPHY</span>
+            <span class="jp">企業理念</span>
+        </div>
+
+        <div class="philosophy-box">
+            <h3>日本と世界をつなぎ、ビジネスの可能性を広げる。</h3>
+            <span class="en-sub">Connecting Japan and the World. Expanding Business Opportunities.</span>
+            <p>
+                私たちは、日本と世界を結ぶ架け橋として、人と企業、商品と市場をつなぎ、新たなビジネスの可能性を切り拓いてまいります。<br>
+                お客様との信頼関係を何よりも大切にし、品質とサービスの向上に努めるとともに、国内外のパートナーとの緊密な連携を通じて、双方にとって価値あるビジネス機会を創出します。
+            </p>
+            <p>
+                また、多様な文化や価値観を尊重し、変化する国際市場に柔軟に対応しながら、常に新たな挑戦を続けてまいります。<br>
+                グローバルな視野と誠実な企業活動を通じて、お客様とともに成長し、豊かな社会と持続可能な未来の実現に貢献することを目指します。
+            </p>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <h4>信頼<span>TRUST</span></h4>
+                <p>誠実な対応と確かな品質を通じて、お客様やパートナー企業との長期的な信頼関係を築きます。</p>
+            </div>
+            <div class="value-card">
+                <h4>挑戦<span>CHALLENGE</span></h4>
+                <p>市場の変化を新たな可能性と捉え、柔軟な発想と行動力をもって、新しい価値の創造に挑み続けます。</p>
+            </div>
+            <div class="value-card">
+                <h4>共創<span>CO-CREATION</span></h4>
+                <p>国内外の企業や人々との連携を深め、それぞれの強みを活かしながら、相互の成長と発展を目指します。</p>
+            </div>
+            <div class="value-card">
+                <h4>国際性<span>GLOBAL PERSPECTIVE</span></h4>
+                <p>多様な文化や商習慣への理解を深め、国境を越えたビジネスの発展に貢献します。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03｜事業紹介（OUR BUSINESS） -->
+    <section class="business-section" id="business">
+        <div class="business-container">
+            <div class="page-title-block">
+                <span class="en">03 | OUR BUSINESS</span>
+                <span class="jp">事業紹介 ― 多様な事業領域を通じて、新たな価値とビジネス機会を創出する</span>
+            </div>
+
+            <div class="lead-statement">
+                株式会社エル・ティ・エルは、幅広い事業分野で培ってきた経験と国内外のネットワークを活かし、商品企画・開発から調達、国際貿易、海外市場への展開まで、お客様のビジネスを多角的に支援しています。
+            </div>
+
+            <div class="biz-grid">
+                <div class="biz-card">
+                    <div class="biz-header">
+                        <span class="biz-num">01</span>
+                        <h3>美容・健康食品事業</h3>
+                    </div>
+                    <span class="biz-en">Beauty & Wellness</span>
+                    <p>美と健康の可能性を追求し、確かな品質と新たな価値を世界へ。化粧品・健康食品の企画・開発、OEM・ODM、国内外への販売・流通支援を展開。</p>
+                    <div class="biz-sublist">
+                        <div><strong>① 化粧品・健康食品の企画・販売</strong>：品質・安全性・機能性に配慮した商品を提案。</div>
+                        <div><strong>② 美容・健康関連商品の輸出入支援</strong>：各国の制度を踏まえた通関・調達支援。</div>
+                        <div><strong>③ OEM・ODMによる商品企画・開発</strong>：処方選定から容器・パッケージ企画まで一貫対応。</div>
+                    </div>
+                </div>
+
+                <div class="biz-card">
+                    <div class="biz-header">
+                        <span class="biz-num">02</span>
+                        <h3>輸出入・貿易支援事業</h3>
+                    </div>
+                    <span class="biz-en">Import & Export Services</span>
+                    <p>国境を越えたビジネスを、確かな経験とネットワークで支える。商品調達、取引先との連絡・調整、書類作成支援、通関・物流手配など貿易実務に総合対応。</p>
+                </div>
+
+                <div class="biz-card">
+                    <div class="biz-header">
+                        <span class="biz-num">03</span>
+                        <h3>生活用品・食品事業</h3>
+                    </div>
+                    <span class="biz-en">Lifestyle Products & Food</span>
+                    <p>日本の優れた品質と暮らしの豊かさを、世界の市場へ。生活雑貨、フィットネス、衛生用品、食品の海外輸出展開を支援します。</p>
+                </div>
+
+                <div class="biz-card">
+                    <div class="biz-header">
+                        <span class="biz-num">04</span>
+                        <h3>陶器事業</h3>
+                    </div>
+                    <span class="biz-en">Japanese Ceramics</span>
+                    <p>日本の伝統美と匠の技を、世界へ届ける。日本各地の伝統と職人技術が息づく陶器・焼物をアジア、北米、欧州へ展開。</p>
+                </div>
+
+                <div class="biz-card">
+                    <div class="biz-header">
+                        <span class="biz-num">05</span>
+                        <h3>ビジネスマッチング・商談会事業</h3>
+                    </div>
+                    <span class="biz-en">Business Matching & Trade Events</span>
+                    <p>企業と企業、人と人をつなぎ、新たなビジネスの未来を拓く。国内外の企業交流会や商談会を企画・運営し、円滑なビジネス交流を促進。</p>
+                </div>
+
+                <div class="biz-card">
+                    <div class="biz-header">
+                        <span class="biz-num">06</span>
+                        <h3>エネルギー関連事業</h3>
+                    </div>
+                    <span class="biz-en">Energy Solutions</span>
+                    <p>グローバルなネットワークを活かし、持続可能な未来に貢献する。再生可能エネルギー分野を視野に入れ、エネルギー関連商材の調達・輸入事業を展開。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 01｜会社概要（COMPANY PROFILE） -->
+    <section class="company-section" id="company">
+        <div class="page-title-block">
+            <span class="en">01 | COMPANY PROFILE</span>
+            <span class="jp">会社概要</span>
+        </div>
+
+        <table class="profile-table">
+            <tr><th>会社名</th><td>株式会社エル・ティ・エル</td></tr>
+            <tr><th>英文社名</th><td>LTL CO., LTD.</td></tr>
+            <tr><th>代表者</th><td>代表取締役 吉田 姿伶</td></tr>
+            <tr><th>所在地</th><td>〒145-0065 東京都大田区東雪谷1丁目2番3-102号</td></tr>
+            <tr><th>電話番号 / FAX</th><td>TEL：03-6421-9675 ／ FAX：03-6421-9676</td></tr>
+            <tr><th>E-mail</th><td>info@l-t-l.co.jp</td></tr>
+            <tr><th>設立</th><td>平成27年4月17日</td></tr>
+            <tr><th>事業内容</th><td>商品企画・開発、化粧品・健康食品事業、OEM・ODM事業、輸出入・貿易支援、生活用品・食品輸出、陶器輸出、ビジネスマッチング・商談会事業、エネルギー関連事業</td></tr>
+        </table>
+
+        <!-- 04｜お問い合わせ（CONTACT） -->
+        <div class="contact-cta" id="contact">
+            <span style="font-family:var(--font-en); color:var(--gold-primary); letter-spacing:0.2em;">04 | CONTACT US</span>
+            <h3 style="font-family:var(--font-serif); font-size:1.5rem; margin:10px 0 15px; font-weight:400;">新たなビジネスの可能性を、ともに。</h3>
+            <p style="font-size:0.92rem; color:var(--text-body); max-width:720px; margin:0 auto;">
+                商品企画・開発、OEM・ODM、輸出入・貿易支援、海外販路開拓、ビジネスマッチングなど、各種ご相談を承っております。どうぞお気軽にお問い合わせください。
+            </p>
+            <div class="contact-methods">
+                <div class="contact-pill"><i class="fa-solid fa-phone"></i> TEL：03-6421-9675</div>
+                <div class="contact-pill"><i class="fa-solid fa-fax"></i> FAX：03-6421-9676</div>
+                <div class="contact-pill"><i class="fa-solid fa-envelope"></i> E-mail：info@l-t-l.co.jp</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p style="font-family:var(--font-serif); color:#FFF; font-size:1.05rem; letter-spacing:0.15em; margin-bottom:8px;">株式会社エル・ティ・エル（LTL CO., LTD.）</p>
+        <p>〒145-0065 東京都大田区東雪谷1丁目2番3-102号 | TEL：03-6421-9675 | FAX：03-6421-9676 | E-mail：info@l-t-l.co.jp</p>
+        <p style="margin-top:20px; font-size:0.78rem; opacity:0.6;">© LTL CO., LTD. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDetail(btn) {
+            const drawer = btn.nextElementSibling;
+            const isOpen = drawer.classList.toggle('open');
+            btn.textContent = isOpen ? 'Close －' : 'Read more ＋';
+        }
+    </script>
+</body>
+</html>
